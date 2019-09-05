@@ -4,7 +4,7 @@ USER root
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install --assume-yes apt-utils
+RUN apt-get update && apt-get upgrade -qqy && apt-get install --assume-yes apt-utils
 
 # confige chinese language
 RUN apt-get -qqy install locales \
